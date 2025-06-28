@@ -1,11 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Toaster from "./Toaster";
+import { getByTitle } from "@testing-library/dom";
+import Pagenotfound from "./Pagenotfound";
 
 function App() {
+  const [show, isSHow]= useState(false);
+  // const {is}= useToaster();
+  const notify=()=>{
+    isSHow(true);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Pagenotfound/>
+      {/* <header className="App-header">
+        <button onClick={notify}>Notify!</button>
+        <Toaster show={show} title={"Hellow how are you"}/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -17,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
