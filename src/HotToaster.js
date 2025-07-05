@@ -1,8 +1,7 @@
-// import { type } from "@testing-library/user-event/dist/type";
 import { useEffect } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 
-const Toaster = (props) => {
+const HotToaster = (props) => {
   const {
     show,
     title,
@@ -18,12 +17,13 @@ const Toaster = (props) => {
     rtl,
     closeButton,
   } = props;
-  
+
   useEffect(() => {
     if (show) {
       if (toastType === "success") {
-        toast.success(title, {
-          onClose: () => {
+        toast.loading(title, {
+            position: "top-right",
+                      onClose: () => {
             closeButton();
             console.log("Toast has been closed!");
             // Perform any action here after the toast closes
@@ -77,21 +77,11 @@ const Toaster = (props) => {
     theme,
     closeButton,
   ]);
-
   return (
-    <ToastContainer
-      position={"top-right"}
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop={true}
-      closeOnClick={true}
-      rtl={rtl || false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme={theme || "dark"}
-    />
+    <div>
+      <Toaster />
+    </div>
   );
 };
 
-export default Toaster;
+export default HotToaster;
