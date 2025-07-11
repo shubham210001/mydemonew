@@ -46,3 +46,11 @@
     border-radius: 10px;
     font-weight: 500;
 }
+.css-17tayi7-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active .MuiTableSortLabel-icon{
+  color: white!important;
+}
+.super-app-theme--header{
+  background-color: red !important;
+  color: white !important;
+  /* height: 20px !important; */
+}

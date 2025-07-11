@@ -4,6 +4,8 @@ import Toaster from "./Toaster";
 // import { getByTitle } from "@testing-library/dom";
 import Pagenotfound from "./Pagenotfound";
 import EnhancedTable from "./EnhancedTable";
+import DataGridTable from "./DataGridTable";
+import Users from "./Users";
 // import HotToaster from "./HotToaster";
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
       />
       <button onClick={notify}>Notify!</button>
       <EnhancedTable />
+      <DataGridTable/>
+      <Users/>
       {/* <HotToaster Toaster
         show={show}
         toastType={"successs"}
